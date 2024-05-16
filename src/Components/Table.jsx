@@ -30,7 +30,7 @@ function Table() {
 
                 <tbody id="tbody">
                     {
-                        products.map((product) => {
+                        products && products.map((product) => {
                             return <TableItem data={product} key={product.id} />
                         })
                     }
