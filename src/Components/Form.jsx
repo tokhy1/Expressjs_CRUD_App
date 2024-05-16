@@ -22,8 +22,7 @@ export default function Form() {
                 console.log(error);
             }
         }
-
-
+        
     }
 
 
