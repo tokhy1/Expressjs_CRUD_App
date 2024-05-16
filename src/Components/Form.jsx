@@ -18,7 +18,6 @@ export default function Form() {
             const data = inputValues()
             try {
                 await axios.post("http://localhost:5000/addProduct", data)
-                window.location.reload()
             } catch (error) {
                 console.log(error);
             }

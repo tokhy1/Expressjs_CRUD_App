@@ -6,17 +6,12 @@ export default function TableItem({ data }) {
     async function deleteProduct(id) {
         try {
             await axios.delete(`http://localhost:5000/deleteProduct/${id}`);
-            window.location.reload();
         } catch (error) {
             console.log(error);
         }
     }
 
     function updateProduct(id) {
-        document.getElementById("productName").value = data.name
-        document.getElementById("productPrice").value = data.price
-        document.getElementById("productDescription").value = data.description
-
         let addButton = document.getElementById("addButton");
         addButton.classList.add("d-none");
 
@@ -32,7 +27,6 @@ export default function TableItem({ data }) {
                     price: document.getElementById("productPrice").value,
                     description: document.getElementById("productDescription").value
                 });
-                window.location.reload();
             } catch (error) {
                 console.log(error);
             }

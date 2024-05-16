@@ -13,7 +13,7 @@ function Table() {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [products])
 
 
     return (
